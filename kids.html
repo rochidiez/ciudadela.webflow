@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com -->
+<!--  Last Published: Fri Oct 28 2016 22:25:30 GMT+0000 (UTC)  -->
+<html data-wf-page="57b460d4d7c7463957da2c19" data-wf-site="5746fdd785323df64d13275c" lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Kids</title>
+  <meta content="Kids" property="og:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/ciudadela.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      google: {
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic"]
+      }
+    });
+  </script>
+  <script src="js/modernizr.js" type="text/javascript"></script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/favi.png" rel="apple-touch-icon">
+  <!--  FontAwesome  -->
+  <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" integrity="sha384-Wrgq82RsEean5tP3NK3zWAemiNEXofJsTwTyHmNb/iL3dP/sZJ4+7sOld1uqYJtE" crossorigin="anonymous">
+  <!--  Esto es necesario para que no se vean las cosas hasta que este todo cargado  -->
+  <style>
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    		display: none !important;
+        }
+  </style>
+  <!--  Para que anden los carouseles  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
+  <!--  
+ .expandible_articulo{
+  	display: -webkit-box!important;
+    display: -webkit-flex!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+  }
+ -->
+  <style>
+    button.slick-arrow {
+      position: absolute;
+  }
+   button.slick-next.slick-arrow {
+      top: 0;
+      right: 0;
+  }
+     button.slick-prev.slick-arrow {
+      top: 10;
+      left: -5px;
+       z-index:2;
+  }
+    	.expandible_articulo{
+    }
+      .preview{
+        width: 23%;
+      }
+    .slick-prev {
+    	font-size: 0;
+     	background-color: inherit;
+    }
+    .slick-prev:before {
+  	font-family: FontAwesome;
+      line-height: 30px;
+      font-size: 25px;
+     	content: "\f104";
+     	width: 30px;
+      height: 30px
+    }
+    .slick-next {
+    	font-size: 0;
+     	background-color: inherit;
+    }
+    .slick-next:before {
+  	font-family: FontAwesome;
+      line-height: 30px;
+      font-size: 25px;
+     	content: "\f105";
+     	width: 30px;
+      height: 30px
+    }
+    .slick-active:focus{
+    	background-color: gray;
+      border: 1px;
+      outline: none;
+    }
+    .slick-arrow:focus {
+     outline:1px solid black;
+    }
+    .icon_loading:before {
+      color: #1c1e29;
+    	content: "\f110";
+      font-family: FontAwesome;
+      line-height: 30px;
+      font-size: 70px;
+     	width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body ng-app="ciudadelaApp" ng-cloak="wapi">
+  <div class="nav_ciudadela w-nav" data-animation="default" data-collapse="medium" data-contain="1" data-duration="400">
+    <div class="navigation-container w-container">
+      <a class="brand-containet w-nav-brand" href="index.html">
+        <div class="cont_logo_nav"><img class="logo_menu" src="images/logo_negro.svg" width="160">
+        </div>
+      </a>
+      <nav class="navmenu w-nav-menu" role="navigation">
+        <div class="w-dropdown" data-delay="0" data-hover="1">
+          <div class="dropdown_toggle w-dropdown-toggle">
+            <div>Productos</div>
+            <div class="w-icon-dropdown-toggle"></div>
+          </div>
+          <nav class="drop_list w-dropdown-list"><a class="dropdown_link w-dropdown-link" href="tom.html">Tom</a><a class="dropdown_link w-dropdown-link" href="mujer.html">Mujer</a><a class="dropdown_link w-dropdown-link" href="colegial.html">Colegial</a><a class="dropdown_link w-dropdown-link" href="kids.html">Kids</a>
+          </nav>
+        </div><a class="nav_btn w-nav-link" href="distribuidores.html">Encontranos</a>
+      </nav>
+      <div class="menu_btn w-nav-button">
+        <div class="w-icon-nav-menu"></div>
+      </div>
+    </div>
+  </div>
+  <div class="seccion">
+    <div class="col_right kids"></div>
+    <div class="col_left kids">
+      <div>
+        <h1 class="h1_seccion">KIDS</h1>
+      </div>
+      <div>
+        <p class="parrafo_principal">Los niños solo quieren divertirse. Las medias <strong>Ciudadela</strong> son las compañeras perfectas para hacerlo. Con la colección más variada y colorida del mercado, estamos seguros que tus hijos sólo se las van a quitar para lavarlas y usarlas de vuelta.</p>
+      </div>
+    </div>
+  </div>
+  <div class="seccion_coleccion" ng-init="selected.product=false" w-get="&#39;/products/Kids&#39;">
+    <div class="loading" ng-show="loading">
+      <div class="fa fa-spin fa-spinner icon_loading"></div>
+    </div>
+    <div class="framed lightbox" ng-show="selected.product">
+      <a class="close_lightbox w-inline-block" href="#" ng-click="selected.product=false"><img src="images/Shape.svg">
+      </a>
+      <div class="col_full_lightbox">
+        <div class="descripcion_lightbox">
+          <h3 class="h3_lightbox">artículo <strong>{{selected.product.Articulo}}</strong></h3>
+        </div><img class="lightboximg" ng-src="{{(selected.variedad||selected.product.Variedad[0])[&#39;Foto Original&#39;][0].url}}" src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg">
+      </div>
+      <div class="col_thumb_lightbox">
+        <div class="items_lightbox">
+          <a class="miniatura_item w-inline-block" href="#" ng-click="selected.variedad=variedad" ng-repeat="variedad in selected.product.Variedad"><img class="miniatura_item thumbnail-small" ng-src="{{variedad.Miniaturas[0].url}}" src="images/1604_13_thumbnails.png">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="flex_grid grid">
+      <div class="framed tarjeta_productos" data-ix="show-expandible" ng-init="thumbSelected.variedad=false" ng-repeat="product in data.results">
+        <a class="marco_miniatura w-inline-block" href="#"><img class="thumbnail" ng-click="selected.product=product;selected.variedad=false" ng-src="{{(thumbSelected.variedad||product.Variedad[0]).Miniaturas[0].url}}" src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg">
+        </a>
+        <div class="expandible_articulo" infinite="true" slick="true" slides-to-scroll="3" slides-to-show="3">
+          <div class="tira" ng-click="thumbSelected.variedad=variedad" ng-repeat="variedad in product.Variedad"><img class="thumbnail-small" ng-src="{{variedad.Miniaturas[0].url}}" src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg">
+          </div>
+        </div>
+        <div class="bg_id_prod">
+          <div class="id_product">9 colores</div>
+        </div>
+        <div class="articulo_contenedor">
+          <div class="nombre_articulo">artículo <strong class="numero_articulo" ng-bind="product.Articulo">1604</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contenedor grid"></div>
+  </div>
+  <div class="footer">
+    <div class="column_footer right_footer">
+      <div class="row_footer">
+        <div class="logo_footer"><img src="images/logo_negro.svg">
+        </div>
+        <div class="div-redes">
+          <div class="flexbox">
+            <div class="socialmedia"><img class="icon-social" src="images/instagram.svg" width="20%">
+            </div>
+            <div class="socialmedia"><img class="icon-social" src="images/facebook.svg" width="20%">
+            </div>
+          </div>
+        </div>
+        <div class="div_newsletter">
+          <div class="w-form" ng-submit="submit()" w-form="subscribe">
+            <form class="form" id="node">
+              <label class="parrafo" for="email">Ingresa tu mail si queres tener las ultimas novedades</label>
+              <div class="news_flex">
+                <input class="w-input" data-name="Email" id="email" maxlength="256" name="email" ng-model="data.email" placeholder="Ingrese su dirección de mail" required="required" type="email">
+                <input class="btn_newsletter w-button" data-wait="Aguarde" type="submit" value="ENVIAR" wait="Aguarde">
+              </div>
+            </form>
+            <div class="back_news w-form-done">
+              <div>Gracias por suscribirte.</div>
+            </div>
+            <div class="w-form-fail" ng-show="fail">
+              <div>Algo salio mal, intentelo de nuevo.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <!--  jQuery 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  -->
+  <!--  Angular  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <!--  Slick - carousel  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-slick-carousel/3.1.7/angular-slick.min.js" charset="utf-8"></script>
+  <!--  WAPI para prod (webflow)  -->
+  <script src="https://waaws-api.herokuapp.com/ciudadela/browser/ng-wapi.js"></script>
+  <!--  Para el mapa  -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwB-zDmCWPD3Tq8WIatIz1qiw52rYjoVY" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.min.js" charset="utf-8"></script>
+  <script>
+    var map = new GMaps({
+      div: '#map',
+      width:'100%',
+      height:'100%',
+      lat:-40.45131627590526,
+      lng:-64.71686004999998
+    });
+    map.setZoom(4)
+    wapiClient.getResource({
+			resourcePath:'/resellers'
+		}).then(function(response){
+      var markers = response.results.map(function(reseller){
+        if(reseller.lat && reseller.long){
+          return({
+            lat: reseller.lat,
+            lng: reseller.long,
+            title: reseller.denomination,
+            infoWindow: {
+              content: '<p>'+reseller.address+'</p>' + '<p>'+reseller.locality+'</p>'
+            }
+          });
+        }
+      }).filter(function(a){ return a; });
+      map.addMarkers(markers);
+		});
+  </script>
+  <!--  Hasta acá lo del mapa  -->
+  <!--  Esto va de la mano con el ngApp del body  -->
+  <script>
+    angular.module('ciudadelaApp',['ngWapi','slickCarousel']);
+  </script>
+</body>
+</html>
